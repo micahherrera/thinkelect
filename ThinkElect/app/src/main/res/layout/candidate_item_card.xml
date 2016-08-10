@@ -7,7 +7,7 @@
     android:layout_margin="1dp"
     android:clickable="true"
     card_view:cardBackgroundColor="#FFFFFF"
-    card_view:cardCornerRadius="2dp"
+    card_view:cardCornerRadius="4dp"
     card_view:cardElevation="3dp">
     <LinearLayout
         android:layout_width="match_parent"
@@ -95,7 +95,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Compare"
+                android:text="Add"
                 android:textSize="10dp"
                 android:gravity="center"
                 android:textColor="#353C49"

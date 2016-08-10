@@ -61,7 +61,7 @@
         android:textAllCaps="false"
         android:background="@drawable/startscreenbutton"/>
     <Button
-        android:id="@+id/button_guest"
+        android:id="@+id/button_forgot"
         android:layout_width="250dp"
         android:layout_height="20dp"
         android:layout_gravity="center_horizontal"

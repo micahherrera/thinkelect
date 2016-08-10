@@ -54,6 +54,7 @@ public class MyBallotActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -68,15 +69,26 @@ public class MyBallotActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        if(!item.isChecked()){
+        item.setChecked(true);
+        //item.setTitle(item.getTitle()+" *");
+             }
+        else if(item.isChecked()){
+            item.setChecked(false);
+           // item.setTitle(item.getTitle().toString().substring(0, item.getTitle().toString().length()-2));
+        }
+
+
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
         }
+//        else if (id == R.id.nav_slideshow) {
+//
+//        } else if (id == R.id.nav_manage) {
+//
+//        }
 // else if (id == R.id.nav_share) {
 //
 //        } else if (id == R.id.nav_send) {
@@ -84,7 +96,7 @@ public class MyBallotActivity extends AppCompatActivity
 //        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        //drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }

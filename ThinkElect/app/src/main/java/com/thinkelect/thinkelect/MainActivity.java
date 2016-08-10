@@ -11,11 +11,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceDetectionApi;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
-import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -51,23 +48,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
             new DownloadUrlTask().execute();
         }
 
-        autocompleteFragment = (PlaceAutocompleteFragment)
-                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
 
-        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-            @Override
-            public void onPlaceSelected(Place place) {
-                latitude = place.getLatLng().latitude;
-                longitude = place.getLatLng().longitude;
-                address = place.getAddress().toString();
-
-            }
-
-            @Override
-            public void onError(Status status) {
-                // TODO: Handle the error.
-            }
-        });
 
         client= new OkHttpClient();
         //check apis

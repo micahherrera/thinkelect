@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+
+    <item
+        android:id="@+id/nav_gallery"
+        android:title="Offices">
+        <menu>
+            <group
+                android:checkableBehavior="all">
+            <item
+                android:id="@+id/nav_pres"
+                android:title="President" />
+            <item
+                android:id="@+id/nav_congress"
+                android:title="Congress" />
+            <item
+                android:id="@+id/nav_state"
+                android:title="State" />
+            </group>
+        </menu>
+    </item>
+
     <group android:checkableBehavior="all">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Contributions" />
+
     </group>
 
     <item android:title="Issues">
         <menu>
+            <group
+                android:checkableBehavior="all">
             <item
                 android:id="@+id/nav_econ"
                 android:title="Economy" />
@@ -61,6 +72,7 @@
             <item
                 android:id="@+id/nav_lgbtq"
                 android:title="Treatment of LGBTQ" />
+            </group>
         </menu>
     </item>
 
