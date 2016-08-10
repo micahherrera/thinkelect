@@ -17,17 +17,26 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDJdHvpHnXT3JyMD_l4idjIn1qbdz3KtbI" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>
+
+        <service android:name=".LocationService" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar">
+
+        </activity>
+        <activity
+            android:name=".MyBallotActivity"
+            android:label="@string/title_activity_my_ballot"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-
-        <service android:name=".LocationService" />
-
-        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

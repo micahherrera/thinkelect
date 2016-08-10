@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="16dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_gravity="center_horizontal"
+        android:hint=" Username"
+        android:textSize="14dp"
+        android:textColor="#353C49"
+        android:drawableStart="@drawable/ic_contacts_black_24dp"
+        android:visibility="gone"
+        android:maxLines="1"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="250dp"
+        android:layout_gravity="center_horizontal"
+        android:hint=" Email"
+        android:textSize="14dp"
+        android:textColor="#353C49"
+        android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+        android:maxLines="1"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="250dp"
+        android:layout_gravity="center_horizontal"
+        android:hint=" Password"
+        android:textSize="14dp"
+        android:maxLines="1"
+        android:drawableStart="@drawable/ic_fingerprint_black_24dp"
+        android:textColor="#353C49"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword" />
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Log in"
+        android:textColor="#353C49"
+        android:textAllCaps="false"
+        android:background="@drawable/startscreenbutton"/>
+    <Button
+        android:id="@+id/button_guest"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Forgot password"
+        android:textColor="#353C49"
+        android:textAllCaps="false"
+        android:background="#ffffff"/>
+
+
+</LinearLayout>

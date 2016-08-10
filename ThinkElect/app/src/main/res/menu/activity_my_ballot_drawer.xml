@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Import" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Slideshow" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
+    </group>
+
+    <item android:title="Issues">
+        <menu>
+            <item
+                android:id="@+id/nav_econ"
+                android:title="Economy" />
+            <item
+                android:id="@+id/nav_terror"
+                android:title="Terrorism" />
+            <item
+                android:id="@+id/nav_foreign"
+                android:title="Foreign Policy" />
+            <item
+                android:id="@+id/nav_health"
+                android:title="Health Care" />
+            <item
+                android:id="@+id/nav_gun"
+                android:title="Gun Policy" />
+            <item
+                android:id="@+id/nav_im"
+                android:title="Immigration" />
+            <item
+                android:id="@+id/nav_socsec"
+                android:title="Social Security" />
+            <item
+                android:id="@+id/nav_ed"
+                android:title="Education" />
+            <item
+                android:id="@+id/nav_supreme"
+                android:title="Supreme Court Appts" />
+            <item
+                android:id="@+id/nav_race"
+                android:title="Treatment of Minorities" />
+            <item
+                android:id="@+id/nav_trade"
+                android:title="Trade Policy" />
+            <item
+                android:id="@+id/nav_abortion"
+                android:title="Abortion" />
+            <item
+                android:id="@+id/nav_lgbtq"
+                android:title="Treatment of LGBTQ" />
+        </menu>
+    </item>
+
+</menu>
