@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 
         @Override
         protected Void doInBackground(Void... voids) {
-            address = "804+grant+st+burleson+tx+76028";
+            address = "91390";
             String response2 = null;
             try {
                 response2 = GetGoogleStuff.run("https://www.googleapis.com/civicinfo/v2/" +

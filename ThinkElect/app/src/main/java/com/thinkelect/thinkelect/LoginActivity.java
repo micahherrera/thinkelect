@@ -1,11 +1,12 @@
 package com.thinkelect.thinkelect;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginStartFragment.StartScreen,
-        LoginCredsFragment.LoginWithCreds {
+        LoginCredsFragment.LoginWithCreds, LoginAddressFragment.SetAddress {
     LoginStartFragment startFragment;
     LoginCredsFragment credsFragment;
     LoginAddressFragment addressFragment;
@@ -52,5 +53,12 @@ public class LoginActivity extends AppCompatActivity implements LoginStartFragme
     public void loginWithCreds(String username, String password) {
         addressFragment = new LoginAddressFragment();
         fm.beginTransaction().replace(R.id.login_holder, addressFragment).commit();
+    }
+
+    @Override
+    public void setAddress() {
+        Intent intent = new Intent(this, MyBallotActivity.class);
+        startActivity(intent);
+
     }
 }

@@ -31,7 +31,7 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:name="com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment"
         />
 
     <Button

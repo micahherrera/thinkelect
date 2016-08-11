@@ -34,8 +34,8 @@ public class LoginCredsFragment extends Fragment implements View.OnClickListener
     }
     @Override
     public void onClick(View view) {
-        if(view.getId()==R.id.button_login && !emailText.getText().toString().equals(null)
-                && !passwordText.getText().toString().equals(null)){
+        if(view.getId()==R.id.button_login && !emailText.getText().toString().equals("")
+                && !passwordText.getText().toString().equals("")){
             mListener.loginWithCreds(emailText.getText().toString(),
                     passwordText.getText().toString());
         }
