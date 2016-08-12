@@ -20,6 +20,7 @@
         card_view:cardCornerRadius="4dp"
         card_view:cardElevation="3dp">
         <ImageView
+            android:id="@+id/imagebio"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@mipmap/ic_launcher"/>
@@ -31,11 +32,11 @@
         card_view:cardBackgroundColor="#FFFFFF"
         card_view:cardCornerRadius="4dp"
         card_view:cardElevation="3dp">
-        <TextView
+        <ListView
+            android:id="@+id/contrList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
-            android:textSize="24sp"/>
+            />
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

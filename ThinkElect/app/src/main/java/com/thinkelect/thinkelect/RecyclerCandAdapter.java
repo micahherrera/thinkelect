@@ -1,9 +1,7 @@
 package com.thinkelect.thinkelect;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +12,6 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by micahherrera on 8/12/16.
@@ -42,14 +39,20 @@ public class RecyclerCandAdapter extends RecyclerView.Adapter<RecyclerCandAdapte
         //TODO: setup layout and figure out how we want to display our images
         Picasso.with(this.context)
                 .load(candidates.get(position).getImgUrl())
+
+                .centerInside().fit()
                 .into(holder.mImage);
-        holder.mName.setText(foodList.get(position).getRestaurantName());
+        holder.mName.setText(candidates.get(position).getFirstName()+" " +candidates.get(position).getLastName());
+        holder.mParty.setText(candidates.get(position).getParty());
+        holder.mOffice.setText(candidates.get(position).getOffice());
+        holder.mContributions.setText(candidates.get(position).getContributionsTotal());
+
     }
 
 
     @Override
     public int getItemCount() {
-        return foodList.size();
+        return candidates.size();
     }
 
     // setting the ViewHolder for my recyclerview with a clickListener
@@ -59,8 +62,8 @@ public class RecyclerCandAdapter extends RecyclerView.Adapter<RecyclerCandAdapte
         public ImageView mImage;
         public TextView mParty;
         TextView mName;
-        List<Food> foodList = new ArrayList<>();
-        Context context;
+        TextView mContributions;
+        TextView mOffice;
 
         public likesViewHolder(View itemView) {
             super(itemView);
@@ -68,15 +71,18 @@ public class RecyclerCandAdapter extends RecyclerView.Adapter<RecyclerCandAdapte
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
             mImage = (ImageView) itemView.findViewById(R.id.pic);
-            mParty = (TextView) itemView.findViewById(R.id.party);
+            mParty = (TextView) itemView.findViewById(R.id.office);
             mName = (TextView) itemView.findViewById(R.id.name);
+            mContributions = (TextView) itemView.findViewById(R.id.contributions);
+            mOffice = (TextView) itemView.findViewById(R.id.party);
 
         }
 
         // telling my ClickListener what to do
         @Override
         public void onClick(View view) {
-
+            Intent intent = new Intent(context, CandidateBioActivity.class);
+            context.startActivity(intent);
         }
 
         @Override

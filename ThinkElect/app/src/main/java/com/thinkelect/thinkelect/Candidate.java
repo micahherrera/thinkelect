@@ -10,12 +10,23 @@ public class Candidate {
     String party;
     String contributionsTotal;
 
-    public Candidate(String firstName, String lastName, String imgUrl, String party, String contributionsTotal) {
+    public String getOffice() {
+        return office;
+    }
+
+    public void setOffice(String office) {
+        this.office = office;
+    }
+
+    String office;
+
+    public Candidate(String firstName, String lastName, String imgUrl, String party, String contributionsTotal, String office) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.imgUrl = imgUrl;
         this.party = party;
         this.contributionsTotal = contributionsTotal;
+        this.office = office;
     }
 
     public String getFirstName() {
