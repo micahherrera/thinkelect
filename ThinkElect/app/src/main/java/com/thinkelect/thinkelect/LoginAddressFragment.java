@@ -61,10 +61,10 @@ public class LoginAddressFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-        mListener.setAddress();
+        mListener.setAddress(address);
     }
 
     public interface SetAddress {
-        void setAddress();
+        void setAddress(String address);
     }
 }
